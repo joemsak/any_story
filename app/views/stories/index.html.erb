@@ -1,1 +1,23 @@
 There are no stories.
+
+<% @stories.each do |story| %>
+  <article class="story">
+    <header>
+      <h1 class="title">
+        <%= story.title %>
+      </h1>
+
+      <span class="author">
+        <%= story.author_name %>
+      </span>
+
+      <span class="written_on">
+        <%= story.written_on %>
+      </span>
+    </header>
+
+    <section class="preview">
+      <%= story.preview %>
+    </section>
+  </article>
+<% end %>
